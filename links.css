@@ -97,7 +97,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 34px;
   font-weight: 700;
-  color: #7A5230;
+  color: #6B3D1E;
   letter-spacing: 0.01em;
 }
 
@@ -159,7 +159,7 @@
 
 /* Primary card (Agendar) */
 .lk-card--primary {
-  background: linear-gradient(135deg, #BA9468, #A67C52, #8F6840, #A67C52, #BA9468);
+  background: #6B3D1E;
   background-size: 400% 400%;
   border-color: transparent;
   box-shadow: 0 6px 28px rgba(166, 124, 88, 0.32);
@@ -181,7 +181,7 @@
 }
 
 .lk-card--primary:hover {
-  background: linear-gradient(135deg, #A67C52, #8F6840, #A67E54, #8F6840, #A67C52);
+  background: #7D4A24;
   background-size: 400% 400%;
   transform: translateY(-3px) scale(1.01);
   box-shadow: 0 14px 44px rgba(166, 124, 88, 0.38);
@@ -193,7 +193,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #BA9468, #8F6840);
+  background: linear-gradient(135deg, #C4884A, #8B5E2E);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,7 +272,7 @@
 /* ===== TOP BAR ===== */
 .top-bar {
   height: 6px;
-  background: linear-gradient(90deg, #BA9468, #8F6840, #BA9468);
+  background: linear-gradient(90deg, #6B3D1E, #6B3D1E, #6B3D1E);
   width: 100%;
 }
 
@@ -280,7 +280,7 @@
 .site-footer {
   position: relative;
   min-height: 72px;
-  background: linear-gradient(135deg, #BA9468 0%, #A67C52 42%, #8F6840 100%);
+  background: linear-gradient(135deg, #6B3D1E 0%, #6B3D1E 42%, #6B3D1E 100%);
   overflow: hidden;
 }
 

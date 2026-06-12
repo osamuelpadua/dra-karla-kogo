@@ -354,11 +354,18 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
-  .lk-main { padding: 40px 16px 64px; }
+  .lk-main { padding: 40px 20px 64px; }
   .lk-logo { height: 96px; }
   .lk-card { padding: 16px 16px; gap: 14px; }
   .lk-icon { width: 44px; height: 44px; }
   .lk-card-title { font-size: 15px; }
+  .lk-name { font-size: 28px; }
+  .lk-bio-header {
+    font-size: 13px;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  .lk-identity { gap: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

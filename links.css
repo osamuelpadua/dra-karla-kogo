@@ -159,10 +159,10 @@
 
 /* Primary card (Agendar) */
 .lk-card--primary {
-  background: linear-gradient(135deg, #D09A5C, #C4884A, #B5703A, #C4884A, #D09A5C);
+  background: linear-gradient(135deg, #BA9468, #A67C52, #8F6840, #A67C52, #BA9468);
   background-size: 400% 400%;
   border-color: transparent;
-  box-shadow: 0 6px 28px rgba(181, 112, 58, 0.35);
+  box-shadow: 0 6px 28px rgba(166, 124, 88, 0.32);
   position: relative;
   overflow: hidden;
 }
@@ -181,10 +181,10 @@
 }
 
 .lk-card--primary:hover {
-  background: linear-gradient(135deg, #C4884A, #B5703A, #9A5C28, #B5703A, #C4884A);
+  background: linear-gradient(135deg, #A67C52, #8F6840, #A67E54, #8F6840, #A67C52);
   background-size: 400% 400%;
   transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 14px 44px rgba(181, 112, 58, 0.42);
+  box-shadow: 0 14px 44px rgba(166, 124, 88, 0.38);
   border-color: transparent;
 }
 
@@ -193,7 +193,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #B5703A, #6B4A2A);
+  background: linear-gradient(135deg, #BA9468, #8F6840);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -272,7 +272,7 @@
 /* ===== TOP BAR ===== */
 .top-bar {
   height: 6px;
-  background: linear-gradient(90deg, #D09A5C, #9A5C28, #D09A5C);
+  background: linear-gradient(90deg, #BA9468, #8F6840, #BA9468);
   width: 100%;
 }
 
@@ -280,7 +280,7 @@
 .site-footer {
   position: relative;
   min-height: 72px;
-  background: linear-gradient(135deg, #D09A5C 0%, #B5703A 42%, #9A5C28 100%);
+  background: linear-gradient(135deg, #BA9468 0%, #A67C52 42%, #8F6840 100%);
   overflow: hidden;
 }
 

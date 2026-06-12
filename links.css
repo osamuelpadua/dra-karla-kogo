@@ -4,7 +4,7 @@
 }
 
 .links-page {
-  background: #F5F0EB;
+  background: #F5EFE8;
   min-height: 100vh;
 }
 
@@ -64,9 +64,9 @@
   min-width: 124px;
   min-height: 124px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(196, 88, 76, 0.15), rgba(80, 67, 34, 0.15));
+  background: linear-gradient(135deg, rgba(181, 112, 58, 0.2), rgba(107, 74, 42, 0.15));
   padding: 6px;
-  box-shadow: 0 4px 20px rgba(80, 67, 34, 0.12);
+  box-shadow: 0 4px 20px rgba(58, 42, 26, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +82,32 @@
   object-fit: cover;
   object-position: center 15%;
   display: block;
-  background: #F5F0EB;
+  background: #F5EFE8;
+}
+
+.lk-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.lk-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #7A5230;
+  letter-spacing: 0.01em;
+}
+
+.lk-bio-header {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(58, 46, 30, 0.65);
+  max-width: 460px;
+  width: 100%;
 }
 
 .lk-bio {
@@ -110,34 +135,34 @@
   padding: 18px 22px;
   border-radius: 18px;
   background: #ffffff;
-  border: 1px solid rgba(80, 67, 34, 0.09);
-  box-shadow: 0 2px 16px rgba(80, 67, 34, 0.06);
+  border: 1px solid rgba(107, 74, 42, 0.12);
+  box-shadow: 0 2px 16px rgba(58, 42, 26, 0.07);
   text-decoration: none;
   cursor: pointer;
   opacity: 0;
   transition: background 0.22s, transform 0.22s, box-shadow 0.22s, border-color 0.22s;
 }
 
-.lk-card:nth-child(1) { animation: lk-fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.18s forwards; }
+.lk-card:nth-child(1) { animation: lk-fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.18s forwards, cta-gradient 10s linear 0.73s infinite; }
 .lk-card:nth-child(2) { animation: lk-fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.26s forwards; }
-.lk-card:nth-child(3) { animation: lk-fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.34s forwards, cta-gradient 10s linear 0.89s infinite; }
+.lk-card:nth-child(3) { animation: lk-fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.34s forwards; }
 .lk-card:nth-child(4) { animation: lk-fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.42s forwards; }
 .lk-card:nth-child(5) { animation: lk-fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.50s forwards; }
 .lk-card:nth-child(6) { animation: lk-fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.58s forwards; }
 
 .lk-card:hover {
-  background: #fdf8f5;
-  border-color: rgba(196, 88, 76, 0.3);
+  background: #fdf8f3;
+  border-color: rgba(181, 112, 58, 0.3);
   transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(80, 67, 34, 0.12);
+  box-shadow: 0 8px 32px rgba(58, 42, 26, 0.12);
 }
 
 /* Primary card (Agendar) */
 .lk-card--primary {
-  background: linear-gradient(135deg, #C4584C, #8B3A30, #7A3228, #8B3A30, #C4584C);
+  background: linear-gradient(135deg, #D09A5C, #C4884A, #B5703A, #C4884A, #D09A5C);
   background-size: 400% 400%;
   border-color: transparent;
-  box-shadow: 0 6px 28px rgba(196, 88, 76, 0.28);
+  box-shadow: 0 6px 28px rgba(181, 112, 58, 0.35);
   position: relative;
   overflow: hidden;
 }
@@ -156,10 +181,10 @@
 }
 
 .lk-card--primary:hover {
-  background: linear-gradient(135deg, #D46A5E, #A04840, #8B3A30, #A04840, #D46A5E);
+  background: linear-gradient(135deg, #C4884A, #B5703A, #9A5C28, #B5703A, #C4884A);
   background-size: 400% 400%;
   transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 14px 44px rgba(196, 88, 76, 0.36);
+  box-shadow: 0 14px 44px rgba(181, 112, 58, 0.42);
   border-color: transparent;
 }
 
@@ -168,7 +193,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #C4584C, #504322);
+  background: linear-gradient(135deg, #B5703A, #6B4A2A);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,7 +272,7 @@
 /* ===== TOP BAR ===== */
 .top-bar {
   height: 6px;
-  background: linear-gradient(90deg, #C4584C, #504322, #C4584C);
+  background: linear-gradient(90deg, #D09A5C, #9A5C28, #D09A5C);
   width: 100%;
 }
 
@@ -255,7 +280,7 @@
 .site-footer {
   position: relative;
   min-height: 72px;
-  background: linear-gradient(135deg, #C4584C 0%, #7A3228 42%, #504322 100%);
+  background: linear-gradient(135deg, #D09A5C 0%, #B5703A 42%, #9A5C28 100%);
   overflow: hidden;
 }
 

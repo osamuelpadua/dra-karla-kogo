@@ -53,7 +53,7 @@
 }
 
 .lk-logo {
-  height: 80px;
+  height: 120px;
   width: auto;
   filter: drop-shadow(0 2px 10px rgba(80, 67, 34, 0.12));
 }
@@ -329,7 +329,7 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 480px) {
   .lk-main { padding: 40px 16px 64px; }
-  .lk-logo { height: 64px; }
+  .lk-logo { height: 96px; }
   .lk-card { padding: 16px 16px; gap: 14px; }
   .lk-icon { width: 44px; height: 44px; }
   .lk-card-title { font-size: 15px; }

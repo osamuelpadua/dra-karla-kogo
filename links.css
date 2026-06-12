@@ -1,0 +1,219 @@
+:root {
+  --dark:       #3A2E1E;
+  --primary:    #504322;
+  --caramel:    #C4584C;
+  --sand:       #EFF1E7;
+  --warm-white: #FDFDF8;
+  --muted:      #A89880;
+  --grad-start: #C4584C;
+  --grad-end:   #504322;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--sand);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 0 60px;
+}
+
+.links-wrapper {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Hero header ── */
+.links-hero {
+  width: 100%;
+  background: linear-gradient(160deg, var(--grad-start), var(--grad-end));
+  padding: 48px 24px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.links-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('assets/dra-karla.jpg') center top / cover no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.links-logo {
+  width: 140px;
+  filter: brightness(0) invert(1);
+  position: relative;
+  z-index: 1;
+}
+
+.links-avatar-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.links-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid rgba(255,255,255,0.6);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.links-name {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+  line-height: 1.2;
+}
+
+.links-tagline {
+  color: rgba(255,255,255,0.88);
+  font-size: 0.82rem;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  margin-top: -10px;
+}
+
+/* ── Cards ── */
+.links-cards {
+  width: 100%;
+  padding: 28px 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--warm-white);
+  border-radius: 14px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--dark);
+  box-shadow: 0 2px 12px rgba(80,67,34,0.10);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.link-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.45s ease, transform 0.45s ease, box-shadow 0.18s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(80,67,34,0.18);
+}
+
+.link-card .card-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.link-card .card-text {
+  flex: 1;
+}
+
+.link-card .card-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.link-card .card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-top: 2px;
+  line-height: 1.25;
+}
+
+.link-card .card-arrow {
+  color: var(--muted);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── CTA WhatsApp destacado ── */
+.link-card.cta-whatsapp {
+  background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+  color: #fff;
+}
+
+.link-card.cta-whatsapp .card-label,
+.link-card.cta-whatsapp .card-title,
+.link-card.cta-whatsapp .card-arrow {
+  color: rgba(255,255,255,0.95);
+}
+
+.link-card.cta-whatsapp .card-icon {
+  background: rgba(255,255,255,0.2);
+}
+
+.link-card.cta-whatsapp:hover {
+  box-shadow: 0 6px 24px rgba(196,88,76,0.4);
+}
+
+/* ── Footer ── */
+.links-footer {
+  margin-top: 36px;
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.links-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Animação sequencial */
+.link-card:nth-child(1) { transition-delay: 0.05s; }
+.link-card:nth-child(2) { transition-delay: 0.12s; }
+.link-card:nth-child(3) { transition-delay: 0.19s; }
+.link-card:nth-child(4) { transition-delay: 0.26s; }
+.link-card:nth-child(5) { transition-delay: 0.33s; }
+
+@media (max-width: 520px) {
+  .links-hero { padding: 40px 20px 30px; }
+  .links-name { font-size: 1.35rem; }
+  .links-avatar { width: 95px; height: 95px; }
+}

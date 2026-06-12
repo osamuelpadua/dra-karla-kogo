@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Karla Côgo — Osteopatia, Coluna & Pilates</title>
+  <meta name="description" content="Links da Dra. Karla Côgo — Osteopata e especialista em coluna e Pilates. Nova Iguaçu - RJ.">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="links.css">
+</head>
+<body>
+
+<div class="links-wrapper">
+
+  <!-- Hero -->
+  <header class="links-hero">
+    <img src="assets/logo.png" alt="Logo Karla Côgo" class="links-logo">
+
+    <div class="links-avatar-wrap">
+      <img src="assets/dra-karla.jpg" alt="Foto da Dra. Karla Côgo" class="links-avatar">
+    </div>
+
+    <h1 class="links-name">Dra. Karla Côgo</h1>
+    <p class="links-tagline">Osteopatia &nbsp;·&nbsp; Coluna &nbsp;·&nbsp; Pilates</p>
+  </header>
+
+  <!-- Cards -->
+  <nav class="links-cards" aria-label="Links da Dra. Karla Côgo">
+
+    <!-- WhatsApp CTA -->
+    <a href="https://wa.me/5521976310379?text=Olá%20Dra.%20Karla%2C%20gostaria%20de%20agendar%20uma%20consulta."
+       target="_blank" rel="noopener noreferrer"
+       class="link-card cta-whatsapp">
+      <span class="card-icon"><i class="fab fa-whatsapp"></i></span>
+      <span class="card-text">
+        <span class="card-label">Agende agora</span>
+        <span class="card-title">Fale pelo WhatsApp</span>
+      </span>
+      <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/karla.cogo/"
+       target="_blank" rel="noopener noreferrer"
+       class="link-card">
+      <span class="card-icon"><i class="fab fa-instagram"></i></span>
+      <span class="card-text">
+        <span class="card-label">Instagram</span>
+        <span class="card-title">@karla.cogo</span>
+      </span>
+      <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+    </a>
+
+    <!-- Site -->
+    <a href="https://drakarlacogo.com.br/"
+       target="_blank" rel="noopener noreferrer"
+       class="link-card">
+      <span class="card-icon"><i class="fas fa-globe"></i></span>
+      <span class="card-text">
+        <span class="card-label">Site oficial</span>
+        <span class="card-title">drakarlacogo.com.br</span>
+      </span>
+      <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+    </a>
+
+    <!-- Localização -->
+    <a href="https://www.google.com/maps?q=Rua+Get%C3%BAlio+Vargas,+121+Sala+803+Centro+Nova+Igua%C3%A7u+RJ"
+       target="_blank" rel="noopener noreferrer"
+       class="link-card">
+      <span class="card-icon"><i class="fas fa-location-dot"></i></span>
+      <span class="card-text">
+        <span class="card-label">Onde me encontrar</span>
+        <span class="card-title">Rua Getúlio Vargas, 121 — Sala 803<br>Centro, Nova Iguaçu - RJ</span>
+      </span>
+      <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+    </a>
+
+    <!-- Avaliação -->
+    <a href="#"
+       class="link-card">
+      <span class="card-icon"><i class="fas fa-star"></i></span>
+      <span class="card-text">
+        <span class="card-label">Avalie</span>
+        <span class="card-title">Deixe sua avaliação</span>
+      </span>
+      <span class="card-arrow"><i class="fas fa-chevron-right"></i></span>
+    </a>
+
+  </nav>
+
+  <footer class="links-footer">
+    <p>Desenvolvido por <a href="https://samuel.dev.br" target="_blank" rel="noopener">Samuel Pádua</a></p>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var cards = document.querySelectorAll('.link-card');
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16, rootMargin: '0px 0px -10% 0px' });
+
+    cards.forEach(function (card) { observer.observe(card); });
+
+    function revealNearBottom() {
+      var scrollBottom = window.scrollY + window.innerHeight;
+      var docHeight = document.documentElement.scrollHeight;
+      if (docHeight - scrollBottom < 80) {
+        cards.forEach(function (card) {
+          if (!card.classList.contains('is-visible')) {
+            card.classList.add('is-visible');
+            observer.unobserve(card);
+          }
+        });
+      }
+    }
+    window.addEventListener('scroll', revealNearBottom, { passive: true });
+    revealNearBottom();
+  })();
+</script>
+
+</body>
+</html>
